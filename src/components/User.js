@@ -3,12 +3,14 @@ import React, { Component } from 'react'
 class User extends Component {
   render() {
     return (
-      <div>
-        <form>
-            <input type="text"/>
-            <button>Gönder</button>
-        </form>
-      </div>
+       <div>
+      <ul>
+      <li>İsim: {this.props.name}</li>
+      <li>Departman: {this.props.department}</li>
+      <li>Maaş: {this.props.salary}</li>
+      </ul>
+    </div>
+
     )
   }
 }
