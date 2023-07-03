@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import User from './components/User';
 import './App.css';
 
 function App() {
@@ -7,16 +8,8 @@ function App() {
   return (
 
     <div className="App">
-      <h4>{1+1}</h4>
-      <h4>{"Merhaba Dünya".toUpperCase()}</h4>
-      <h4>{new Date().getHours()}</h4>
-      <h4>{test}</h4>
-      <div>
-      {
-      isAuth ? <h4>Kullanıcı girişi yapıldı</h4>
-      : null
-    }
-      </div>
+      <h4>App Component</h4>
+      <User/>
     </div>
    
   );
