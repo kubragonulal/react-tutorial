@@ -4,15 +4,13 @@ import Navbar from "./components/Navbar";
 import './App.css';
 
 function App() {
-  const test = 34;
-  const isAuth= true;
   return (
 
     <div className="container">
-      <Navbar title = "User App Title"/>
+      <Navbar title = "User App "/>
       <hr/>
       <User name= "Kübra Gönülal" department = "Yazılım" salary= "50000"/>
-      <User name= "Erdem Yılmaz" department = "Yazılım" salary= "60000"/>
+      <User name= "Erdem Yılmaz"  salary= "60000"/>
     </div>
    
   );
