@@ -1,9 +1,16 @@
 import React, { Component } from 'react'
 import PropTypes from "prop-types";
 class User extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            isVisible : false
+        }
+    }
   render() {
     //Destructing
     const {name, department, salary} = this.props;
+    const {isVisible} = this.state;    
     return (
        <div calssName="col-md-8 mb-4">
       <div className="card">
@@ -12,13 +19,17 @@ class User extends Component {
             <i className="far fa-trash-alt" style={{cursor:"pointer"}}></i>
             
             </div>  
-            <div className="card-body"> 
-            <p className="card-text">Maaş : {salary}</p>  
-            <p className="card-text">Departman : {department}</p>
-            </div>
+            {
+                isVisible ? <div className="card-body"> 
+                <p className="card-text">Maaş : {salary}</p>  
+                <p className="card-text">Departman : {department}</p>
+                <p>{this.state.test}</p>
+                </div> : null
+            }
+            
         </div>    
     </div>
-    )
+    )  
   }
 }
 User.defaultProps={
